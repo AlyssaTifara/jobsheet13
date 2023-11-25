@@ -4,13 +4,19 @@ public class UcapanTerimakasih_3{
         Scanner sc = new Scanner(System.in);
         System.out.println("Tuliskan NAMA orang yang ingin anda beri ucapkan :");
         String namaOrang = sc.nextLine();
-        sc.close();
         return namaOrang;
     }
-    public static void UcapanTerimakasih(){
+    public static String UcapanTambahan() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Tuliskan apa yang ingin anda ucapkan pada orang tersebut :");
+        String ucapanTambahan = sc.nextLine();
+        return ucapanTambahan;
+    }
+
+    public static void UcapanTerimakasih() {
         String nama = PenerimaUcapan();
-        System.out.println("Thank you " +nama+ " for being the best teacher in the world.\n"+
-        "You inspired in me a love for learning and made me feel like i could ask you anything");
+        String tambahan = UcapanTambahan();
+        System.out.println("Thank you " + nama + ". " + tambahan);
     }
     public static void main(String[] args){
         UcapanTerimakasih();
